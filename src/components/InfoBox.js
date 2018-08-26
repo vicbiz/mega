@@ -78,6 +78,7 @@ class InfoBox extends Component {
 
 
 
+
     componentDidMount(){
 
         const allResults = this.state.allResults;
