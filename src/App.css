@@ -1,23 +1,24 @@
-table{
+table {
   margin: 0 auto;
 }
-.resultBigTable td, .resultBigTable th{
+.resultBigTable td,
+.resultBigTable th {
   padding: 5px 10px;
   text-align: center;
   border: 1px solid #ccc;
 }
-.resultBigTable th{
-  background: #DBFDA5;
+.resultBigTable th {
+  background: #dbfda5;
 }
 
-.ballWrap{
+.ballWrap {
   display: inline-block;
   width: 37px;
   margin-right: 5px;
 }
 
-.ball{
-  background: #A6E7FD;
+.ball {
+  background: #a6e7fd;
   border: 1px solid #cccccc;
   border-radius: 50%;
   width: 35px;
@@ -30,11 +31,11 @@ table{
   display: inline-block;
 }
 
-.powerBall{
+.powerBall {
   background-color: #ffde17;
 }
 
-.winCount{
+.winCount {
   width: 35px;
   text-align: center;
   font-size: 14px;
@@ -43,39 +44,21 @@ table{
   padding-bottom: 15px;
 }
 
-.infoBlock{
+.infoBlock {
   margin: 20px 0;
 }
 
-.infoTitleWrap{
-  
-}
-.infoTitleWrap .btn{
-  margin: 0 5px;
+.infoTitleWrap .btn {
+  font-size: 12px;
 }
 
-.aRight{
+.aRight {
   text-align: right;
 }
-.infoContentWrap{
+.infoContentWrap {
   margin: 20px 0;
 }
 
-
-.pickedResult .ballWrap{
+.pickedResult .ballWrap {
   margin: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
