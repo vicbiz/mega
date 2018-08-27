@@ -147,9 +147,11 @@ class InfoBox extends Component {
                         <div className="col-8 infoTitleWrap">
                             <h4>Mega Ball Number Status (Last {this.state.allResults.length} Draws)</h4>
                         </div>
-                        <div className="col-4 aRight">
+                        <div className="col-2 aRight">
                             <button type="button" className="btn btn-primary btn-sm" onClick={() => this.updateSort('pn')}>Sort By Number</button>
-                            <button type="button" className="btn btn-primary btn-sm" onClick={() => this.updateSort('pc')}>Sort By Count</button>
+                        </div>
+                        <div className="col-2 aRight">
+                          <button type="button" className="btn btn-primary btn-sm" onClick={() => this.updateSort('pc')}>Sort By Count</button>
                         </div>
                     </div>
                     <div className="row infoContentWrap">
@@ -166,9 +168,11 @@ class InfoBox extends Component {
                         <div className="col-8">
                             <h4>Winning Number Status</h4>
                         </div>
-                        <div className="col-4 aRight">
+                        <div className="col-2 aRight">
                             <button type="button" className="btn btn-primary btn-sm" onClick={() => this.updateSort('nn')}>Sort By Number</button>
-                            <button type="button" className="btn btn-primary btn-sm" onClick={() => this.updateSort('nc')}>Sort By Count</button>
+                        </div>
+                        <div className="col-2 aRight">
+                          <button type="button" className="btn btn-primary btn-sm" onClick={() => this.updateSort('nc')}>Sort By Count</button>
                         </div>
                     </div>
                     <div className="row infoContentWrap">
