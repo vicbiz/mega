@@ -243,7 +243,7 @@ class InfoBox extends Component {
             </div>
           </div>
           <div className="row infoContentWrap">
-            <div className="col-12 col-lg-4">
+            <div className="col-12">
               {this.state.winNumbers.map((result, i) => (
                 <div className="ballWrap" key={i}>
                   <div className="ball">{result.number}</div>
