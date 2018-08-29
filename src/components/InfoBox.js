@@ -84,14 +84,18 @@ class InfoBox extends Component {
         let pickedObj = {};
         for (let j = 0; j < 5; j++) {
           let tempMega = Math.floor(Math.random() * Math.floor(10));
+          let pickedCount = 0;
           let pickedResult = [];
-          for (let k = 0; k < 5; k++) {
+          while (pickedCount < 5) {
             let tempNumber = Math.floor(Math.random() * Math.floor(10));
-            pickedResult.push(winNumbers[tempNumber].number);
+            if (!pickedResult.find(k => k === winNumbers[tempNumber].number)) {
+              pickedCount++;
+              pickedResult.push(winNumbers[tempNumber].number);
+            }
           }
           Object.assign(pickedObj, {
             megaBall: megaNumbers[tempMega].powerball,
-            pickedNumbers: pickedResult
+            pickedNumbers: pickedResult.sort()
           });
         }
         // console.log("pickedObj",pickedObj);
@@ -126,7 +130,7 @@ class InfoBox extends Component {
 
     let allPowerBallCounts = getCount(allWinPowerBallsArray);
 
-    // Fill up 0...
+    // Fill up 0 win...
     for (let i = 1; i < 26; i++) {
       let tempKey = i < 10 ? "0" + i : "" + i;
       !allPowerBallCounts[tempKey]
@@ -135,7 +139,7 @@ class InfoBox extends Component {
       // console.log("tempKey",tempKey, !allPowerBallCounts[tempKey]);
     }
 
-    // console.log("allPowerBallCounts",allPowerBallCounts, "length");
+    console.log("allPowerBallCounts", allPowerBallCounts, "length");
 
     const allMegaballWithCountSortedByKey = Object.keys(allPowerBallCounts)
       .sort((a, b) => a - b)
@@ -282,14 +286,14 @@ class InfoBox extends Component {
             <div className="col-12 col-lg-6" id="topResult">
               {this.state.pickedTop10.map((result, i) => (
                 <div key={i}>
-                  <div className="ballWrap">
-                    <div className="ball powerBall">{result.megaBall}</div>
-                  </div>
                   {result.pickedNumbers.map((resultNumber, j) => (
                     <div className="ballWrap" key={j}>
                       <div className="ball">{resultNumber}</div>
                     </div>
                   ))}
+                  <div className="ballWrap">
+                    <div className="ball powerBall">{result.megaBall}</div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -324,14 +328,14 @@ class InfoBox extends Component {
             <div className="col-12 col-lg-6" id="btmResult">
               {this.state.pickedBtm10.map((result, i) => (
                 <div key={i}>
-                  <div className="ballWrap">
-                    <div className="ball powerBall">{result.megaBall}</div>
-                  </div>
                   {result.pickedNumbers.map((resultNumber, j) => (
                     <div className="ballWrap" key={j}>
                       <div className="ball">{resultNumber}</div>
                     </div>
                   ))}
+                  <div className="ballWrap">
+                    <div className="ball powerBall">{result.megaBall}</div>
+                  </div>
                 </div>
               ))}
             </div>
